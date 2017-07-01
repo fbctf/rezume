@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:300,500" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		button {
+			border: none;
+		}
+		
+		html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+body{
+    height:100%; /* force the BODY element to match the height of the HTML element */
+    font-family: "Roboto", sans-serif;
+}
+
+		body {
+			font-size: 62.5%;
+			font-family: Garamond, sans-serif;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e570e7+0,c85ec7+47,a849a3+100;Pink+3D+%233 */
+	
+		}
+
+		body:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-filter: blur(1px);
+  background: url(assets/imgs/StockSnap_CCHDYTHU37.jpg);
+	 -webkit-background-size: cover;
+		     -moz-background-size: cover;
+		     -o-background-size: cover;
+		     background-size: cover;
+
+		     filter: blur(1px);
+}
+
+		h1 { font-size: 4.0em; }
+		p, li { font-size: 1.8em; }
+
+		.clear { clear: both; }
+
+		#header {
+			background: #e3da9d;
+		}
+
+		#content {
+			 
+		}
+		#main-content {
+			width: 50%;
+			display: block;
+			float: right;
+			    position: relative;
+			    max-height: 1000px;
+			    bottom: 0px;
+			    width: 50%;
+		}
+
+		#sidebar {
+			display: block;
+			float: left;
+			background: url(assets/imgs/StockSnap_CCHDYTHU37.jpg)  no-repeat center center fixed; 
+		     -webkit-background-size: cover;
+		     -moz-background-size: cover;
+		     -o-background-size: cover;
+		     background-size: cover;
+			position: relative;
+			max-height: 1000px;
+			bottom: 0px;
+			    width: 50%;
+			    border-radius: 3px 0px 0px 3px;
+		}
+		#sidebar ul {
+			list-style: inside;
+		}
+
+		#sidebar > .login.text-wrapper {
+			margin-top: 100px;
+			padding: 0px 50px 100px;
+			display: inline-block;
+			white-space: nowrap;
+			text-align: left;
+			position: relative;
+			bottom: 0px;
+		}
+		#sidebar > .login.text-wrapper h1, p {
+			color: #F1F1F1;
+			font-size: 14px;
+		}
+		#sidebar > .login.text-wrapper h1 {
+			font-size: 12em;
+			color: #fff;
+			padding: 0px;
+			margin: 0px;
+			line-height: 0.9em;
+    		margin-bottom: 20px;
+    		font-family: "Roboto", sans-serif;		
+		}
+
+		#sidebar > .login.text-wrapper > .login.signup-medias {
+			margin: 25px auto;
+		}
+		#sidebar > .login.text-wrapper > .login.signup-medias h4 {
+			font-size: 18px;
+			color: #f9f9f9;
+			font-weight: 300;
+
+		}
+		#sidebar > .login.text-wrapper > .login.signup-medias ul {
+			list-style: none;
+			margin-top: 15px;
+		}
+
+		#sidebar > .login.text-wrapper > .login.signup-medias ul > li {
+			display: inline-block;
+		}
+		#sidebar > .login.text-wrapper > .login.signup-medias ul > li > a {
+			color: #FFF;
+			text-decoration: none;
+		}
+		#sidebar > .login.text-wrapper > .login.signup-medias ul > li.facebook {
+			background: #3b5998;
+			width: 60px;
+    		margin-right: 15px;
+    		font-size: 14px;
+		}
+		#sidebar > .login.text-wrapper > .login.signup-medias ul > li.twitter {
+			background: #1dcaff;
+			font-weight: 300;
+			font-size: 14px;
+		}
+		#sidebar > .login.text-wrapper > .login.signup-medias ul > li.twitter, li.facebook {
+			box-shadow:0px 1px 7px 0px rgba(0, 0, 0, 0.44);
+		}
+	
+		#sidebar > .login.text-wrapper > p {
+			 color: #F1F1F1;
+		    font-size: 14px;
+		    width: 350px;
+		    white-space: pre-line;
+		    line-height: 20px;
+		}
+
+
+		.button {
+			display: inline-block;
+		    padding: 6px 12px;
+		    margin-bottom: 0;
+		    font-size: 14px;
+		    font-weight: 400;
+		    line-height: 1.42857143;
+		    text-align: center;
+		    white-space: nowrap;
+		    vertical-align: middle;
+		    cursor: pointer;
+		    -webkit-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    user-select: none;
+		    background-image: none;
+		}
+
+		.button.rounded {
+			    border-radius: 22.5px;
+			    padding: 10px 16px;
+			    font-size: 18px;
+			    line-height: 1.33;
+		}
+		
+		#main-content > .loginfrom {
+			margin-top: 100px;
+			padding: 0px 50px 100px;
+		}
+
+		#content {
+			width: 1000px;
+			margin: 150px auto;
+			display: block;
+		    padding: 0px 15px 0px 0px;
+		    background: white;
+		    height: auto;
+		    position: absolute;
+		    left: 0px;
+		    right: 0;
+		    border-radius: 3px;
+}
+		#main-content > .loginfrom > h2 {
+			font-size: 40px;
+		}
+		#main-content > .loginfrom > p {
+			font-size: 14px;
+			color: rgba(0, 0, 0, 0.57);
+		}
+		#main-content > .loginfrom > p > a {
+			color: #8badff;
+			text-decoration: none;
+		}
+		#main-content > .loginfrom > h2, p {
+			margin-bottom: 15px;
+			    color: rgba(0, 0, 0, 0.83);
+    font-weight: 400;
+		}
+
+		fieldset {
+			border: none;
+		}
+		.form {
+			padding: 20px 15px;
+			width: 359px;
+		}
+		.form.login {     
+			border-right: 0;
+		    border-left: 0;
+		    border-top: 0;
+		    border-bottom: 2px solid #e2e2e2;
+		    font-size: 12px;
+		    font-weight: 600;
+		    color: #bbb; 
+}
+    	.form.login:focus { box-shadow: none; outline: none; border-bottom: 2px solid #616161; }
+		.inline {
+			display: inline;
+		}
+		.equals {
+			width: 49%;
+			max-width: 50%;
+		}
+		.floated { text-align: right; float: right; };
+		.floated.rigth { text-align: right; float: right; };
+
+		span {
+			position: relative;
+    		top: -3px;
+		}
+		.button.greenligth {
+			background: #00e676;
+			color: white;
+			box-shadow: 0px 0px 13px 0px rgb(82, 255, 171, 0.5);
+		}
+		.button.greenligth.submit {
+			width: 120px;
+			text-align: center;
+		}
+		.normaly {
+			    font-size: 13px;
+			    font-weight: 400;
+			    color: rgba(0, 0, 0, 0.83);
+			    text-decoration: none;
+			}
+			span.normaly {
+							    position: relative;
+			    top: -2px;
+			}
+
+			.margin-top-offset-15 {
+				margin-top: 15px;
+			}
+			.margin-top-offset-25 {
+				margin-top: 25px;
+			}
+
+			fieldset {
+				padding: 0.35em 0em 0.625em;
+			}
+
+			.label {
+				position: relative;
+				display: inline-block;
+				font-size: 13px;
+				cursor: pointer ;
+			}
+			
+			.label:before {
+				content: "";
+			    display: inline-block;
+			    width: 16px;
+			    height: 16px;
+			    margin-right: 10px;
+			    position: absolute;
+			    left: 0;
+			    bottom: 1px;
+			    background: #fff;
+			    border: 1px solid #00e676;
+			    border-radius: 2px;
+			    top: -4px;
+			}
+			input[type=checkbox] {
+				display: none;
+			}
+
+			input[type=checkbox]:checked + .label:before {
+				border: 1px solid #00e676;
+			    content: "\f00c";
+			    position: absolute;
+			    font-family: "FontAwesome";
+			    text-align: center;
+			    font-size: 12px;
+			    background: #00e676;
+			    color: #FFF;
+			    line-height: 17px;
+			    padding-left: 1px;
+			}
+
+			.wrapper.footer {
+				padding: 10px;
+			}
+	</style>
+</head>
+<body>
+		<div id="content">
+		
+		<div id="sidebar">
+			<div class="login text-wrapper">
+				<h1>Hello <br> World.</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, deserunt!</p>
+			
+				<div class="login signup-medias">
+					<h4>Login With social media</h4>
+					<ul>
+						<li class="button rounded facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="button rounded twitter"><a href=#""> <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Login with Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="main-content">
+			<div class="loginfrom">
+
+				<h2>Login</h2>
+				<p>Lorem ipsum dolor sit amet? <a href="">Create your account</a> Delectus, recusandae.</p>
+
+				<form action="" method="post">
+					<fieldset class="">
+						<input type="text" class="form login" name="cmail" placeholder="E-mail Address">
+					</fieldset>
+					<fieldset>
+						<input type="password" class="form login" name="cpass" placeholder="Password">
+					</fieldset>
+					<fieldset class="margin-top-offset-25">
+						<div class="wrapper footer">
+							<div class="inline equals">
+								<input type="checkbox" name="remember" id="remember" value="true"> 
+								<label class="label custom" for="remember">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="normaly">Remember Me</span></label>
+							</div>
+							<div class="inline equals">
+								<a href="#" class="floated rigth normaly">Forgot password?</a>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="margin-top-offset-15">
+						<button type="submit" class="button rounded greenligth submit floated rigth">Login</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

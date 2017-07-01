@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastr-se</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/tags.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
+
+  <style>
+    body {
+     background: url(assets/imgs/StockSnap_R0Y8HDXAOO.jpg) no-repeat center center fixed; 
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+   }
+ </style>
+</head>
+
+<body>
+  <div class="bg"></div>
+  <!-- multistep form -->
+  <form id="msform">
+    <!-- progressbar -->
+    <ul id="progressbar">
+      <li class="active">Account Setup</li>
+      <li>Add Photo</li>
+      <li>Location</li>
+      <li>Tags</li>
+      <li>Personal Details</li>
+    </ul>
+    <!-- fieldsets -->
+    <fieldset>
+      <h2 class="fs-title">Create your account</h2>
+
+      <input type="text" name="email" placeholder="Email" />
+      <input type="password" name="pass" placeholder="Password" />
+      <input type="password" name="cpass" placeholder="Confirm Password" />
+      <h3 class="fs-subtitle">Entering your real email helps people find you online.</h3>
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
+      <center><i class="fa fa-camera" aria-hidden="true"></i></center>
+      <h3 class="fs-subtitle">Add a photo of yourself</h3>
+      <input type="file" name="file" id="photo" class="uploadfile">
+      <label for="photo">
+        <img style="
+        width: 200px;
+        height: auto;
+        border-radius: 3%;" src="http://arianimartins.com/wp-content/uploads/2016/04/default_avatar.png" alt="">
+      </label>
+      <p>Click on the image to add a photo</p>
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Location</h2>
+      <h3 class="fs-subtitle">Where are you, Fabio?</h3>
+      <div id="locationField">
+      <input id="autocomplete" name="location" placeholder="Enter your address"type="text"></input>
+    </div>
+
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">What do you love?</h2>
+      <i class="fa fa-heart" aria-hidden="true"></i>
+      <h3 class="fs-subtitle">We have some tags for you.</h3>
+      <ul id="tags">
+        <!-- Existing list items will be pre-added to the tags -->
+        <li>Tecnology</li>
+        <li>Science</li>
+        <li>Books</li>
+        <li>Marketing</li>
+      </ul>
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Personal Details</h2>
+      <h3 class="fs-subtitle">We will never sell it</h3>
+      <input type="text" name="fname" placeholder="First Name" />
+      <input type="text" name="lname" placeholder="Last Name" />
+      <input type="text" name="phone" placeholder="Phone" />
+      <textarea name="address" placeholder="Address"></textarea>
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="submit" name="submit" class="submit action-button" value="Submit" />
+    </fieldset>
+  </form>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcR7iZRIfOqNypR8YJfQY_lo21vPXzcOU&libraries=places"></script>
+
+  <script src="js/index.js"></script>
+  <script src="js/tag-it.js"></script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#tags").tagit({
+        availableTags: ["C++", "Java", "Php", "Javascript", "Ruby", "Python", "C"],
+        autocomplete: {delay: 0, minLength: 1},
+        allowDuplicates: false,
+        allowSpaces: true,
+        tagLimit: 5,
+        placeholderText: 'What you love?',
+        singleField: true
+      });
+
+
+
+
+    });
+  </script>
+
+  <script>
+     (function(){
+       function initialize() {
+
+        var input = document.getElementById('autocomplete');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+     }());
+  </script>
+    
+</body>
+</html>

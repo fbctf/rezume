@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Settings Painel</title>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/settings.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:300,500" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+		<nav class="painel primary">
+			<div class="container wrapper">
+				<div class="dropdown floated left">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+					<span class="title">Settings</span>
+				</div>
+				<div class="navbar floated right">
+					<ul>
+						<li class="search icon">
+							<a href="#">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li class="navbar dropdown">
+							<a href="#">
+								<i class="fa fa-bell" aria-hidden="true"></i>
+								<span class="notification counter">
+									<i class="fa fa-circle"><span>7</span></i>
+								</span>
+							</a>
+							<ul class="dropdown">
+								<li>
+									<a href="#">
+										<img class="picture small rounded" src="assets/imgs/profile.jpg" alt="">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, eius.</p>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-cloud-download" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img class="picture small rounded" src="assets/imgs/profile.jpg" alt="" title="">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<nav class="painel secondary">
+			<div class="container">
+				<ul class="navbar">
+					<li class="active"><a href="#">profile</a></li>
+					<li><a href="#">password</a></li>
+					<li>
+						<a href="#">
+							Invitations
+							<span class="notification counter">
+								<i class="fa fa-circle"><span>1</span></i>
+							</span>
+						</a>
+
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main class="content" id="main">
+		<div class="container">
+			<div class="profile">
+				<div class="wrapper">
+					<h3 class="title">basic info</h3>
+					<form class="form" action="" method="get" enctype="" >
+						<div class="row">
+							<div class="col-md-6">
+								<div class="picture">
+									<img class="picture small rounded" src="assets/imgs/profile.jpg" style="width: 50px; height: auto;" alt="" title="">
+									<div class="actions">
+									<span class="rounded button">
+										<i class="fa fa-pencil" aria-hidden="true"></i>
+									</span>
+									<span class="rounded button">
+										<i class="fa fa-trash" aria-hidden="true"></i>
+									</span>
+								</div>
+								</div>
+								
+							</div>
+							<div class="col-md-6">
+								<label for="name">name</label>
+								<input type="text" class="form-control" name="name" class="settings input" id="name" value="Fabio Castro">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<label for="username">user name</label>
+								<input type="text" class="form-control" name="username" class="settings input" id="username" placeholder="Username" value="@fbctf">
+							</div>
+							<div class="col-md-6">
+								<label for="email">email</label>
+								<input type="text" class="form-control" name="email" class="settings input" id="email" placeholder="E-mail adress" value="fabio@rezumes.me">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<label for="location">location</label>
+								<input type="text" class="form-control" name="location" class="settings input" id="location" placeholder="Location" value="São Paulo - SP">
+							</div>
+							<div class="col-md-6">
+								<label for="website">Website</label>
+								<input type="text" class="form-control" name="website" class="settings input" id="website" value="http://www.rezumes.me" placeholder="Web Site">
+							</div>
+						</div>
+						<div class="row">
+							<textarea name="bio" class="form-control" id="bio" cols="10" rows="10" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti beatae libero fugit culpa aliquam. Optio sequi voluptate, tempore velit. Accusamus sint vitae consectetur repellendus quos? Porro asperiores rem aut possimus." style="margin: 0px 0px 10px; width: 438px; height: 181px;"></textarea>
+						</div>
+						<div>
+							<button type="submit" class="button update">Update Account Settings</button>
+						</div>
+					</form>
+				</div>
+				</div>
+			<div class="aside">
+				<div class="wrapper">
+					<div class="title">Your tags</div>
+					<ul class="tags">
+						<li>
+						<a href="#">
+							Visual Design 
+							<i class="fa fa-times" aria-hidden="true"></i>
+						</a>
+						</li>
+						<li>
+							<a href="#">
+							Programing 
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							Javascript
+							<i class="fa fa-times" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+						<a href="#">
+							Python 
+							<i class="fa fa-times" aria-hidden="true"></i>
+						</a>
+						</li>
+						<li>
+						<a href="#">
+							Python 
+							<i class="fa fa-times" aria-hidden="true"></i>
+						</a>
+						</li>
+						<li>
+						<a href="#">
+							Python 
+							<i class="fa fa-times" aria-hidden="true"></i>
+						</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer></footer>
+</body>
+</html>

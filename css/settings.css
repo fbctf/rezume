@@ -1,0 +1,264 @@
+html {}
+body {}
+
+h1,h2,h3,h5,h6 {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+.floated {
+	display: inline-block;
+}
+.floated.left {
+	float: left;
+}
+.floated.right {
+	float: right;
+}
+.painel {}
+.painel.primary {
+	background: rgb(64, 72, 84);
+	max-height: 80px;
+	height: 80px;
+}
+.painel > .wrapper {
+	padding: 1.5em 0.8em 6em 0.8em;
+	display: block;
+	height: auto;
+}
+.painel > .wrapper > .dropdown { position: relative; display: block; width: 100px; }
+.painel > .wrapper > .dropdown > i.fa.fa-bars { font-weight: 400; color: #CCC; font-size: 1.5em; }
+.painel > .wrapper > .dropdown > span.title {
+	color: #FFF;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	position: absolute;
+    top: 4px;
+    left: 30px;
+}
+
+
+.navbar {
+	padding: 5px 15px;
+	position: relative;
+}
+.navbar ul {
+	list-style: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.navbar ul > li {
+	display: inline-block;
+	margin-right: 40px;
+	position: relative;
+}
+.navbar ul > li > a { color: #FFF; text-decoration: none; font-size: 1.2em; font-weight: 300; cursor: pointer; }
+
+span.notification {
+	position: absolute;
+	top: -7px;
+	left: 8px;
+    text-align: center;
+   
+}
+span.notification > i.fa.fa-circle {
+	text-align: center;
+	color: #ff78d4;
+	font-size: 20px;
+}
+span.notification > i.fa.fa-circle > span {
+	color: #FFF;	
+    left: 6px;
+    font-size: 10px;
+    top: 6px;
+    font-weight: 600;
+    position: absolute;
+
+    font-family: "Roboto", sans-serif;
+}
+.navbar ul > li > a > img.picture {
+	position: absolute;
+	top: -25px;
+    left: 5px;
+}
+img.picture.small {
+	width: 37px;
+	height: 37px;
+}
+img.picture.rounded {
+	border-radius: 50%;
+}
+
+
+.secondary {
+	background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.secondary > .container > ul.navbar  { margin: 0; padding: 0; height: auto; }
+.secondary > .container > ul.navbar > li { position: relative; display: inline-block;  padding: 25px; }
+.secondary > .container > ul.navbar > li.active {border-bottom: 2px solid #ff78d4;}
+.secondary > .container > ul.navbar > li > a { font-size: 16px; font-weight: 400; color: rgba(0,0,0,0.56); text-decoration: none; text-transform: capitalize; font-family: "Open Sans", sans-serif;  }
+.secondary > .container > ul.navbar > li > a > span.notification { position: relative; font-family: "Open Sans", sans-serif;  }
+.secondary > .container > ul.navbar > li > a > span.notification {
+    top: -7px;
+    left: 0px;
+    text-align: center;
+}
+
+.row {
+	display: block;
+	float: left;
+	width: 100%;
+}
+.row > .col-md-6 {
+	width: 50%;
+	display: block;
+
+	float: left;
+
+	position: relative;
+}
+
+#main.content {}
+#main.content > .container > .profile > .wrapper > .title { font-family: "Open Sans", sans-serif; font-size: 1em;  text-transform: capitalize; font-weight: 300; color:#5f5a5a; padding: 1em 0px 2.5em 0px;}
+#main.content > .container > .profile {width: 50%;margin: 15px 0px;float: left;border: 1px solid rgba(0, 0, 0, 0.04);padding: 0px 20px 10px;}
+#main.content > .container > .profile > .wrapper {/* padding: 0px 20px 10px; */width: 100%;}
+
+.actions {
+	position: absolute;
+    top: 10px;
+    right: 40px;
+}
+.actions > .button {
+	background: #f7f7f7;
+    border-radius: 13.5px;
+    padding: 5px;
+    width: 17px;
+    display: inline-block;
+    text-align: center;
+    color: #808080;
+    border: 1px solid #f3f3f3;
+    cursor: pointer;
+}
+.actions > .button:first-child {
+	margin-right: 15px;
+
+}
+.form-control {
+	border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 8px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.57);
+    font-family: "Open Sans", sans-serif;
+}
+.form-control::placeholder {
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.80);
+	font-family: "Open Sans", sans-serif;
+}
+label {
+	color: rgba(0, 0, 0, 0.8);
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8em;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+button.button[type="submit"] {
+	border: none;
+}
+.button.update {
+	height: 60px;
+	width: 100%;
+
+	text-align: center;
+	color: #FFF;
+
+	background: #ff78d4;
+}
+
+.aside {
+	width: 45%;
+	padding: 0;
+	margin: 0px;
+	float: left;
+}
+.aside > .wrapper > .title {
+	font-family: "Open Sans", sans-serif; font-size: 1em;  text-transform: capitalize; font-weight: 300; color:#5f5a5a; padding: 1em 0px 2.5em 0px;
+}
+.aside > .wrapper {
+	padding: 0em 0.8em 6em 0.8em;
+	display: block;
+	margin: 15px 30px 15px;
+	float: left; 
+	
+}
+.aside > .wrapper > ul.tags {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.aside > .wrapper > ul.tags > li {
+	display: block;
+	width: 180px;
+	height: 25px;
+    background: rgba(0, 0, 0, 0.01);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    padding: 8px;
+    border-radius: 2px;
+
+	position: relative;
+
+	line-height: 25px;
+}
+.aside > .wrapper > ul.tags > li > a {
+	text-decoration: none;
+	text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.57);
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    text-align: justify;
+    font-weight: 400;
+}
+.aside > .wrapper > ul.tags li:not(:last-child) {
+	margin-bottom: 15px;
+}
+.aside > .wrapper > ul.tags li > a {
+	color: #443;
+}
+.aside > .wrapper > ul.tags li > a > .fa.fa-times {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	color: #ccc;
+	font-weight: 300;
+
+	cursor: pointer;
+}
+.navbar ul > li.navbar.dropdown {
+	position: relative;
+}
+.navbar ul > li > ul.dropdown {
+    position: absolute;
+    top: 51px;
+    width: 230px;
+    background: #fdfdfd;
+    z-index: 1;
+    height: auto;
+    text-align: left;
+    direction: ltr;
+    left: 25px;
+    height: 300px;
+    max-height: 301px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    border-top: 0px;
+}
